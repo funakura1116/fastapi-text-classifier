@@ -1,1 +1,1 @@
-# flask-app-text-classifier
+# fastapi-text-classifier
