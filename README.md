@@ -1,5 +1,12 @@
 # fastapi-text-classifier
 
+## 事前準備
+- 適当な場所にフォルダを作成する。以下そのフォルダ名を `fastapi-folder` とする
+- `fastapi-folder` 内に `requirements.txt` を置く
+- `fastapi-folder` 内に `model` フォルダと `src` フォルダを作成する
+- `model` フォルダにチェックポイントフォルダを置く
+- `src` フォルダに `main.py` を作成する
+
 ```sh
 pwd
 ```
