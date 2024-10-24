@@ -7,6 +7,16 @@
 - `model` フォルダにチェックポイントフォルダを置く
 - `src` フォルダに `main.py` を作成する
 
+以下のようなフォルダ構成になっていれば良い。
+```text
+.
+├── model
+│   └── checkpoint-60
+├── requirements.txt
+└── src
+    └── main.py
+```
+
 以下、ターミナル/コマンドプロンプト/PowerShell上で作業する。カレントディレクトリが `fastapi-text-classifier` になっていることを確認すること(`VSCode` で `fastapi-text-classifier` を開けばそれで良い )。
 
 ```sh
