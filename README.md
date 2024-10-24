@@ -1,4 +1,4 @@
-# fastapi-text-classifier
+# FastAPI で作る文書分類モデルAPI
 
 ## 事前準備
 - 適当な場所にフォルダを作成する。以下そのフォルダ名を `fastapi-text-classifier` とする
