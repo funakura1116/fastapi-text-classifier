@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from transformers import pipeline
+from fastapi.responses import HTMLResponse
 
 # FastAPIのアプリケーションインスタンスを作成
 app = FastAPI()
@@ -15,6 +16,15 @@ classifier = pipeline(
 # リクエストボディの構造を定義
 class TextInput(BaseModel):
     text: str
+
+# シンプルなタイトル画面のエンドポイント
+@app.get("/", response_class=HTMLResponse)
+async def read_root():
+    return """
+    <h1>FastAPIへようこそ</h1>
+    <p>このアプリはテキスト分類を行います。</p>
+    <p>テキスト分類を行うには <code>/predict</code> にリクエストを送ってください。</p>
+    """
 
 # 推論を行うエンドポイント
 @app.post("/predict")
