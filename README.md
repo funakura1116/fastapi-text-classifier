@@ -24,6 +24,12 @@ pwd
 ```
 > path/to/fastapi-text-classifier
 
+> [!WARNING]
+> PowerShellはデフォルトだと仮想環境を有効化するスクリプトの実行ができない。以下のスクリプトで実行を許可するか、コマンドプロンプトを利用する。
+> ```sh
+> Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+> ```
+
 ## 環境構築
 
 ```sh
