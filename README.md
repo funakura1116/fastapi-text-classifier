@@ -49,3 +49,8 @@ pip install -r requirements.txt
 ```sh
 uvicorn main:app --reload
 ```
+
+## リクエストの送信
+```sh
+python3 src/api_request.py
+```
