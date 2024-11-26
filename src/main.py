@@ -1,16 +1,19 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from transformers import pipeline
+from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
 from fastapi.responses import HTMLResponse
 
 # FastAPIのアプリケーションインスタンスを作成
 app = FastAPI()
 
+tokenizer = AutoTokenizer.from_pretrained("hfunakura/bert-feedback-classifier")
+model = AutoModelForSequenceClassification.from_pretrained("hfunakura/bert-feedback-classifier")
+
 # 推論用クラスの作成
 classifier = pipeline(
     "text-classification",
-    model="../model/checkpoint-60",  # モデル名を指定
-    tokenizer="../model/checkpoint-60"  # トークナイザを指定
+    model=model,  # モデル名を指定
+    tokenizer=tokenizer  # トークナイザを指定
 )
 
 # リクエストボディの構造を定義
