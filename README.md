@@ -3,18 +3,16 @@
 ## 事前準備
 - 適当な場所にフォルダを作成する。以下そのフォルダ名を `fastapi-text-classifier` とする
 - `fastapi-text-classifier` 内に `requirements.txt` を置く
-- `fastapi-text-classifier` 内に `model` フォルダと `src` フォルダを作成する
-- `model` フォルダにチェックポイントフォルダを置く
-- `src` フォルダに `main.py` を作成する
+- `fastapi-text-classifier` 内に `src` フォルダを作成する
+- `src` フォルダに `main.py` と `api_request.py` を作成する
 
 以下のようなフォルダ構成になっていれば良い。
 ```text
 .
-├── model
-│   └── checkpoint-60
 ├── requirements.txt
 └── src
     └── main.py
+    └── api_request.py
 ```
 
 以下、ターミナル/コマンドプロンプト/PowerShell上で作業する。カレントディレクトリが `fastapi-text-classifier` になっていることを確認すること(`VSCode` で `fastapi-text-classifier` を開けばそれで良い )。
